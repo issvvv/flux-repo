@@ -4,4 +4,4 @@ metadata:
   name: apps
   namespace: flux-system
 resources:
-  - apps/monitoring
+  - ../../apps/monitoring/
