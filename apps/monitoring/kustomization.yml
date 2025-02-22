@@ -3,5 +3,4 @@ kind: Kustomization
 namespace: monitoring
 resources:
   - namespace.yml
-  - helm-repository.yml
-  - helm-release.yml
+  - ./metrics-server/
