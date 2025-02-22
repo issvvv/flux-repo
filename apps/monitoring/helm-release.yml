@@ -12,8 +12,8 @@ spec:
       version: "3.11.0"
       sourceRef:
         kind: HelmRepository
-        name: metrics-server-repo
-        namespace: flux-system
+        name: metrics-server-repository
+        namespace: monitoring
   values:
     args:
       - --kubelet-insecure-tls
