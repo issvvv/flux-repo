@@ -6,4 +6,4 @@ metadata:
   namespace: traefic-controller
 spec:
   interval: 5m
-  url: https://artifacthub.io/packages/helm/traefik/traefik
+  url: https://traefik.github.io/charts

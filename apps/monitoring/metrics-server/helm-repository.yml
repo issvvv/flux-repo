@@ -5,4 +5,4 @@ metadata:
   name: metrics-server-repository
   namespace: monitoring
 spec:
-  url: https://artifacthub.io/packages/helm/metrics-server/metrics-server
+  url: https://kubernetes-sigs.github.io/metrics-server/
