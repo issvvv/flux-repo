@@ -5,3 +5,4 @@ namespace: traefic-controller
 resources:
   - helm-repository.yml
   - helm-release.yml
+  - namespace.yml
