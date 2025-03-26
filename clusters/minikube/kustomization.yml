@@ -5,4 +5,3 @@ metadata:
   namespace: flux-system
 resources:
   - ../../apps/monitoring/
-  - ../../apps/traefic-controller/
