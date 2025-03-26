@@ -23,13 +23,11 @@ spec:
       existingSecret: grafana-credentials
       userKey: adminUsername
       passwordKey: adminPassword
-    ### Wanna try with no ingress rn
-    # ingress:
-      # enabled: true
-      # annotations:
-      #   kubernetes.io/ingress.class: "traefik"
-      #   nginx.ingress.kubernetes.io/rewrite-target: /$1
-      #   nginx.ingress.kubernetes.io/use-regex: "true"
-      # path: /grafana/?(.*)
-      # hosts:
-      #   - kube01.home.local
+    ingress:
+      enabled: true
+      annotations:
+        kubernetes.io/ingress.class: "traefik"
+        traefik.ingress.kubernetes.io/router.middlewares: "default-replacepathregex@kubernetescrd"
+      path: /grafana/?(.*)
+      hosts:
+        - kube01.home.local
