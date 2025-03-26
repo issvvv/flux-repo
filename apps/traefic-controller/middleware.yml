@@ -6,5 +6,5 @@ metadata:
   namespace: traefik-controller
 spec:
   replacePathRegex:
-    regex: "^/(.*)"
-    replacement: "/$1"
+    regex: "^/([^/]+)/(.*)"
+    replacement: "/$2"
