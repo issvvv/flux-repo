@@ -3,7 +3,7 @@ apiVersion: traefik.containo.us/v1alpha1
 kind: Middleware
 metadata:
   name: replacepathregex
-  namespace: default
+  namespace: traefic-controller
 spec:
   replacePathRegex:
     regex: "^/(.*)"
