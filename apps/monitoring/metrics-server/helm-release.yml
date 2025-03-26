@@ -5,6 +5,7 @@ metadata:
   name: metrics-server
   namespace: monitoring
 spec:
+  interval: 5m
   chart:
     spec:
       chart: metrics-server
