@@ -5,3 +5,4 @@ namespace: monitoring
 resources:
   - namespace.yml
   - ./metrics-server/
+  - ./grafana/

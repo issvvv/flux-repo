@@ -4,4 +4,32 @@ kind: HelmRelease
 metadata:
   name: grafana
   namespace: monitoring
-#TODO
+spec:
+  interval: 5m
+  chart:
+    spec:
+      chart: grafana
+      version: "8.10.4"
+      sourceRef:
+        kind: HelmRepository
+        name: grafana-repository
+  values:
+    persistence:
+      enabled: true
+      size: 10Gi
+    service:
+      port: 3000
+    admin:
+      existingSecret: grafana-credentials
+      userKey: adminUsername
+      passwordKey: adminPassword
+    ### Wanna try with no ingress rn
+    # ingress:
+      # enabled: true
+      # annotations:
+      #   kubernetes.io/ingress.class: "traefik"
+      #   nginx.ingress.kubernetes.io/rewrite-target: /$1
+      #   nginx.ingress.kubernetes.io/use-regex: "true"
+      # path: /grafana/?(.*)
+      # hosts:
+      #   - kube01.home.local
