@@ -2,7 +2,8 @@
 apiVersion: source.toolkit.fluxcd.io/v1beta2
 kind: HelmRepository
 metadata:
-  name: metrics-server-repository
+  name: grafana-repository
   namespace: monitoring
 spec:
-  url: https://artifacthub.io/packages/helm/metrics-server/metrics-server
+  interval: 5m
+  url: https://artifacthub.io/packages/helm/grafana/grafana
