@@ -26,8 +26,9 @@ spec:
     ingress:
       enabled: true
       annotations:
-        kubernetes.io/ingress.class: "traefik"
-        traefik.ingress.kubernetes.io/router.middlewares: "traefik-controller-replacepathregex@kubernetescrd"
-      path: /grafana/?(.*)
+        kubernetes.io/ingress.class: "nginx"
       hosts:
-        - kube01.home.local
+        - host: grafana.kube01.home.local
+          paths:
+            - path: /
+              pathType: Prefix
