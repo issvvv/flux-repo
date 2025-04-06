@@ -13,3 +13,9 @@ spec:
       sourceRef:
         kind: HelmRepository
         name: prometheus-repository
+  values:
+    prometheus:
+      prometheusSpec:
+        replicas: 1
+        service:
+          type: ClusterIP
