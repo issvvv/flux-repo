@@ -6,3 +6,13 @@ metadata:
   namespace: flux-system
 resources:
   - ../../apps/monitoring/
+spec:
+  path: ./
+  prune: true
+  sourceRef:
+    kind: GitRepository
+    name: flux-system
+  postBuild:
+    substitute:
+      - kind: ConfigMap
+        name: cluster_vars
