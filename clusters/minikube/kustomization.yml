@@ -6,6 +6,7 @@ metadata:
   namespace: flux-system
 resources:
   - ../../apps/monitoring/
+  - ../../apps/ingress-nginx/
 spec:
   path: ./
   prune: true
