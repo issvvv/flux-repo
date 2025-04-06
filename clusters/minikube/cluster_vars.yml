@@ -2,7 +2,7 @@
 apiVersion: v1
 kind: ConfigMap
 metadata:
-  name: cluster_vars
+  name: cluster-vars
   namespace: flux-system
 data:
   cluster_fqdn: "kube01.home.local"
