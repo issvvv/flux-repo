@@ -5,18 +5,7 @@ metadata:
   name: apps
   namespace: flux-system
 resources:
-  - ./cluster_vars.yml
-
   - ../../apps/monitoring/
   #- ../../apps/ingress-nginx/
 
-spec:
-  path: ./
-  prune: true
-  sourceRef:
-    kind: GitRepository
-    name: flux-system
-  postBuild:
-    substitute:
-      - kind: ConfigMap
-        name: cluster-vars
+#TODO need to check crds of this guy: https://github.com/brainfair/awesome-flux-infra
