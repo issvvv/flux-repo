@@ -28,7 +28,6 @@ spec:
       annotations:
         kubernetes.io/ingress.class: "nginx"
       hosts:
-        - host: grafana.kube01.home.local
-          paths:
-            - path: /
-              pathType: Prefix
+        - grafana.kube01.home.local
+      path: /
+      pathType: Prefix
